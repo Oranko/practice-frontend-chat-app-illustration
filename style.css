@@ -1,0 +1,285 @@
+body {
+    background-color: hsl(270, 20%, 96%);
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+.design-bubble {
+    position: fixed;
+    float: left;
+    top: -10vh;
+    left: -3em;
+    height: clamp(70%, 70%, 100%);
+    width: clamp(200px, 25%, 25%);
+    z-index: -1;
+    border-radius: 0 0 200px 200px;
+    background-image: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+}
+
+.design-bubble-2 {
+    position: fixed;
+    float: right;
+    bottom: -10vh;
+    right: -3em;
+    width: clamp(200px, 25%, 25%);
+    transform: rotate(180deg);
+    z-index: -1;
+    opacity: 5%;
+    height: 100vh;
+
+    border-radius: 0 0 200px 200px;
+    background-image: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+}
+
+.phone-body {
+    height: 85%;
+    width: 42vh;
+    background-color: white;
+    position: relative;
+    margin-left: 18vw;
+    border-radius: 30px;
+    padding: 1em;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 18px 25px 79px -20px rgba(143, 135, 143, 0.63);
+}
+
+.notch {
+    width: 52%;
+    height: 2.5rem;
+    background-color: white;
+    border-radius: 600px;
+    position: absolute;
+    align-self: center;
+    top: 0;
+    z-index: 5;
+}
+
+.chat-head {
+    position: absolute;
+    top: 1em;
+    display: flex;
+    width: calc(100% - 2em);
+    height: 5em;
+    z-index: 1;
+    align-items: center;
+    border-radius: 22px 22px 7px 7px;
+    background-image: linear-gradient(to left, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+}
+
+.back {
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    color: white;
+    transform: rotate(-90deg);
+    font-size: 2em;
+}
+
+.chat-head img {
+    margin-left: -0.2rem;
+    margin-top: 1rem;
+}
+
+.pp {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    color: white;
+    font-weight: 500;
+}
+
+.pe {
+    margin-top: 2.5rem;
+    margin-left: auto;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: hsl(270, 20%, 96%);
+    font-weight: 600;
+}
+
+.pp::after {
+    color: hsl(276, 100%, 81%);
+    margin-top: 0rem;
+    content: "Available to Walk";
+    display: block;
+    width: 125%;
+    font-size: 0.7em;
+}
+
+
+.chat-body {
+    height: 100%;
+    border-radius: 22px 22px 22px 22px;
+    width: 100%;
+    background-color: hsl(270, 20%, 96%);
+    padding: 7em 1em 1em 1em;
+    box-sizing: border-box;
+    position: relative;
+    font-size: 10px;
+    line-height: 1.5em;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.chat-head img {
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+@media (max-width:870px) {
+    .container {
+        display: initial;
+
+    }
+
+    .phone-body {
+        height: clamp(600px, 70vh, 700px);
+        width: clamp(300px, 35vh, 350px);
+        margin: 5rem auto 5rem auto;
+    }
+
+    .info {
+        text-align: center;
+        margin: 5rem auto 5rem auto !important;
+    }
+
+    body {
+        overflow: scroll;
+    }
+}
+
+.outgoing-image {
+    margin-top: 1em;
+    display: flex;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.outgoing-image img {
+    height: 7vh;
+    width: 7vh;
+    border-radius: 10px;
+    margin: 0.2em;
+}
+
+
+
+.input-area {
+    height: 7%;
+    width: 90%;
+    background-color: white;
+    z-index: 2;
+    align-self: center;
+    position: absolute;
+    bottom: 1rem;
+    border-radius: 8%/50%;
+    display: flex;
+}
+
+.input-area p {
+    margin: 7% 0.5rem 2em 1.5rem;
+    align-items: center;
+    color: hsl(206, 6%, 79%);
+
+}
+
+.incoming-chat {
+    background-color: #e8e2ed;
+    color: hsl(276, 55%, 52%);
+    max-width: 55%;
+    padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+    margin-top: 1em;
+    border-radius: 12px 12px 12px 5px;
+}
+
+.incoming-chat:nth-child(1) {
+    margin-top: 2em;
+}
+
+.rate-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    color: white;
+    padding: 0.7rem;
+    padding-right: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 12px 12px 12px 5px;
+    background-image: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+}
+
+.rate-card span {
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rate {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.outgoing-chat {
+    background-color: white;
+    color: hsl(271, 15%, 43%);
+    max-width: 55%;
+    padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: 0;
+    border-radius: 12px 12px 5px 12px;
+    box-shadow: 5px 21px 82px -14px rgba(143, 135, 143, 1);
+
+}
+
+.input-area div {
+    height: 2rem;
+    width: 2rem;
+    background-color: hsl(271, 36%, 24%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    align-self: center;
+    position: absolute;
+    right: 0.3em;
+}
+
+.radio-btn {
+    border: 1.5px solid hsl(289, 100%, 72%);
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+}
+
+.info {
+
+    width: clamp(300px, 30%, 30%);
+    margin-left: 10vw;
+    color: hsl(270, 7%, 64%);
+    line-height: 1.8rem;
+    word-spacing: 0.1rem;
+}
+
+.info h1 {
+    color: hsl(271, 36%, 24%);
+}
